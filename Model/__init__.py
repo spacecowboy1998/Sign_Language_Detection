@@ -1,0 +1,1 @@
+from Model.hand_gesture.Hand_Gesture_Classifier import HandGestureClassifier
