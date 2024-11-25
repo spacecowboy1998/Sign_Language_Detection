@@ -1,7 +1,7 @@
 import cv2
 import copy
 import mediapipe as mp
-from Utils import calc_landmark_list, pre_process_landmark, draw_landmarks, logging_landmarks, logging_name
+from Utilities.Utils import calc_landmark_list, pre_process_landmark, draw_landmarks, logging_landmarks, logging_name
 
 # Define gestures
 class_names = ['ა','კ','ი','გამარჯობა', ' ']

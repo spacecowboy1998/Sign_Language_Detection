@@ -204,7 +204,7 @@ def logging_landmarks(class_id, landmark_list):
         class_id: The class identifier (integer) representing the gesture class id.
         landmark_list: List of normalized landmark points to log.
     """
-    path = 'Model/hand_gesture/hand_gesture_landmarks.csv'
+    path = '../Model/hand_gesture/hand_gesture_landmarks.csv'
     with open(path, 'a', newline="") as f:
         writer = csv.writer(f)
         writer.writerow([class_id] + landmark_list)
@@ -217,7 +217,7 @@ def logging_name(class_names):
         class_names: List of class names representing different gesture types.
     """
 
-    path = 'Model/hand_gesture/hand_gesture_label.csv'
+    path = '../Model/hand_gesture/hand_gesture_label.csv'
     with open(path, 'w', newline="", encoding='utf-8') as f:
         writer = csv.writer(f)
         for class_id, class_name in enumerate(class_names):

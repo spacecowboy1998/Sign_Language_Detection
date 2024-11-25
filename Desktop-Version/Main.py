@@ -4,7 +4,7 @@ from tkinter import filedialog
 from PIL import Image, ImageTk
 import mediapipe as mp
 from Model.hand_gesture.Hand_Gesture_Classifier import HandGestureClassifier
-from Utils import *
+from Utilities.Utils import *
 
 # Global Configuration
 PROBABILITY_THRESHOLD = 0.5
@@ -18,7 +18,7 @@ hands = mp_hands.Hands(static_image_mode=False, max_num_hands=1)
 keypoint_classifier = HandGestureClassifier()
 
 # Read Labels
-with open('Model/hand_gesture/hand_gesture_label.csv', encoding='utf-8') as f:
+with open('../Model/hand_gesture/hand_gesture_label.csv', encoding='utf-8') as f:
     keypoint_classifier_labels = [row[0] for row in csv.reader(f)]
 
 # Tkinter Initialization

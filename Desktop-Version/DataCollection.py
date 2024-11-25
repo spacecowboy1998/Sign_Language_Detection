@@ -1,13 +1,18 @@
 import os
-import cv2
 import mediapipe as mp
-from Utils import *
+from Utilities.Utils import *
 
 # Define constants
-DATA_DIR = './data'
-DATASET_SIZE = 100
-CLASS_NAMES = ['ა', 'კ', 'ი', 'გამარჯობა', ' ']
+DATA_DIR = '../data'
+DATASET_SIZE = 500
+CLASS_NAMES = [
+    "ა", "ბ", "გ", "დ", "ე", "ვ", "ზ", "თ", "ი", "კ",
+    "ლ", "მ", "ნ", "ო", "პ", "ჟ", "რ", "ს", "ტ", "უ",
+    "ფ", "ქ", "ღ", "ყ", "შ", "ჩ", "ც", "ძ", "წ", "ჭ",
+    "ხ", "ჯ", "ჰ", "გამარჯობა", " "
+]
 NUMBER_OF_CLASSES = len(CLASS_NAMES)
+print(NUMBER_OF_CLASSES)
 
 def capture_images(dataset_size, number_of_classes):
 
